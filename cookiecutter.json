@@ -1,0 +1,13 @@
+{
+  "author_name": "Desmond L Molloy",
+  "github_username": "dlmolloy97",
+  "author_email": "dlmolloy97@gmail.com",
+  "project_name": "My repo",
+  "repo_name": "{{ cookiecutter.project_name|lower|replace(' ', '_')|replace('-', '_') }}",
+  "pkg_name": "{{ cookiecutter.repo_name|lower}}",
+  "project_description": "Put your repo description here.",
+  "project_short_description": "{{ cookiecutter.project_description }}",
+  "year": "2023",
+  "version": "0.1.0",
+  "license": "MIT",
+  "github_remote_link": "https://github.com/dlmolloy97/{{ cookiecutter.repo_name }}.git"}

@@ -1,0 +1,47 @@
+# Write a .toml file that can take input from the call to cookiecutter
+# and use it to fill in the template
+
+
+[project]
+
+name = "{{ cookiecutter.project_name }}"
+
+description = "{{ cookiecutter.project_description }}"
+
+author = "{{ cookiecutter.author_name }}"
+
+email = "{{ cookiecutter.author_email }}"
+
+readme = "README.md"
+
+license = "MIT"
+
+requires-python = ">=3.6"
+
+[tool.poetry.dependencies]
+
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+
+pytest = "^5.2"
+
+pytest-cov = "^2.8"
+
+[tool.poetry.scripts]
+
+{{ cookiecutter.project_name }} = "{{ cookiecutter.project_name }}.__main__:main"
+
+dependencies = ["pyyaml"]
+
+[project.optional-dependencies]
+docs = [
+    "sphinx",
+    "sphinx-autodoc-typehints",
+    "sphinx-rtd-theme",
+    "myst-parser",
+    "myst-nb",
+    "sphinx-copybutton",
+    "sphinx-autoapi"
+]
+
